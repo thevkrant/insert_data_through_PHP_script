@@ -31,3 +31,4 @@ if ($conn->query($sql) === TRUE) {
 }
 ?>
 ```
+## Error reporting:
