@@ -35,4 +35,7 @@ if ($conn->query($sql) === TRUE) {
 The error_reporting() function sets the error_reporting directive at runtime. The error_reporting(E_ALL) is the most widely used among developers to show error messages because it is more readable and understandable.
 
 ### Syntax:
-```php```
+```php
+error_reporting(E_ALL);
+ini_set('display_errors', 0);
+```
