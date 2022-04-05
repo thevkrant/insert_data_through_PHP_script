@@ -65,3 +65,5 @@ function createConnection()
 	return $con;
 }
 ```
+## Close connection:
+```php```
