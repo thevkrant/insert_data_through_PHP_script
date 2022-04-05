@@ -101,12 +101,8 @@ function closeupdateConnection($con2)
 }
 ```
 
-## 3. SQL query for get data from tables:
+## 3. SQL query and bind function for fetch data from tables:
 ### Syntax:
 ```php
-$sql = "// write your SQL query here";
-$stmt = $con->prepare($sql);
-$stmt->bind_result();
-$stmt->execute();
-$stateArr1 = array();
+
 ```
