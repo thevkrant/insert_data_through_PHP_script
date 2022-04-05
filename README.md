@@ -100,3 +100,5 @@ function closeupdateConnection($con2)
 	mysqli_close($con2);
 }
 ```
+## 2. Update connection:
+### Syntax:
