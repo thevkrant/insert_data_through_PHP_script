@@ -62,10 +62,7 @@ function createConnection()
 	}
 	return $con;
 }
-```
-## Close connection:
-### Syntax:
-```php
+
 function closeConnection($con)
 {
 	mysqli_close($con);
@@ -104,7 +101,7 @@ function closeupdateConnection($con2)
 ## 3. SQL query and bind function for fetch data from tables:
 ### Syntax:
 ```php
-$sql = "// write your SQL query here";
+$sql = "// write your SQL select query here";
 $stmt = $con->prepare($sql);
 $stmt->bind_result($state_id, $tehsil_id, $district_id, $district_name  //veriables);
 $stmt->execute();
@@ -122,3 +119,6 @@ while ($stmt->fetch()) {
 
 $stmt->close();
 ```
+
+## 4. SQL query and bind function for fetch data from tables:
+### Syntax:
