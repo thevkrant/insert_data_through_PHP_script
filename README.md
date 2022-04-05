@@ -101,9 +101,9 @@ function closeupdateConnection($con2)
 ## 3. SQL query and bind function for fetch data from tables:
 ### Syntax:
 ```php
-$sql = "// write your SQL select query here";
+$sql = "SELECT dt.state_id, tt.tehsil_id, dt.district_id, dt.district_name from tehsil_table tt join district_table dt on dt.district_id = tt.district_id";  // Write your SQL query here.
 $stmt = $con->prepare($sql);
-$stmt->bind_result($state_id, $tehsil_id, $district_id, $district_name  //veriables);
+$stmt->bind_result($state_id, $tehsil_id, $district_id, $district_name);  //veriables
 $stmt->execute();
 $stateArr1 = array();
 
@@ -123,5 +123,17 @@ $stmt->close();
 ## 4. SQL query and bind function for update data to table:
 ### Syntax:
 ```php
+foreach ($stateArr1 as $key => $value) {
 
+	$tehsil_id = $value->tehsil_id;
+	$district_id = $value->district_id;
+	$state_id = $value->state_id;
+
+	$update_sql = "update tehsil_table set state_id=? where tehsil_id=? and district_id=?";
+	$stmt = $con2->prepare($update_sql);
+	$stmt->bind_param("iii", $state_id, $tehsil_id, $district_id);
+	$stmt->execute();
+	$stmt->close();
+	$i++;
+}
 ```
