@@ -98,10 +98,10 @@ function closeupdateConnection($con2)
 }
 ```
 
-## 3. SQL query and bind function for fetch data from tables:
+## 3. SQL select query and bind function for fetch data from tables:
 ### Syntax:
 ```php
-$sql = "SELECT dt.state_id, tt.tehsil_id, dt.district_id, dt.district_name from tehsil_table tt join district_table dt on dt.district_id = tt.district_id";  // Write your SQL query here.
+$sql = "SELECT dt.state_id, tt.tehsil_id, dt.district_id, dt.district_name from tehsil_table tt join district_table dt on dt.district_id = tt.district_id";  // write your SQL query here.
 $stmt = $con->prepare($sql);
 $stmt->bind_result($state_id, $tehsil_id, $district_id, $district_name);  //veriables
 $stmt->execute();
@@ -120,7 +120,7 @@ while ($stmt->fetch()) {
 $stmt->close();
 ```
 
-## 4. SQL query and bind function for update data to table:
+## 4. SQL update query and bind function for update data to table:
 ### Syntax:
 ```php
 foreach ($stateArr1 as $key => $value) {
@@ -129,7 +129,7 @@ foreach ($stateArr1 as $key => $value) {
 	$district_id = $value->district_id;
 	$state_id = $value->state_id;
 
-	$update_sql = "update tehsil_table set state_id=? where tehsil_id=? and district_id=?";
+	$update_sql = "update tehsil_table set state_id=? where tehsil_id=? and district_id=?";  // write your SQL query here.
 	$stmt = $con2->prepare($update_sql);
 	$stmt->bind_param("iii", $state_id, $tehsil_id, $district_id);
 	$stmt->execute();
