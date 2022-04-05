@@ -136,3 +136,6 @@ foreach ($stateArr1 as $key => $value) {
 	$i++;
 }
 ```
+
+## *Author Name*
+[Vikrant](https://github.com/thevkrant)
