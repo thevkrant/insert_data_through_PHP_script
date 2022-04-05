@@ -39,8 +39,10 @@ The error_reporting() function sets the error_reporting directive at runtime. Th
 error_reporting(E_ALL);
 ini_set('display_errors', 0);
 ```
+> Note: Change 0 to 1 in code for display the errors.
 
 ## 1. First create connection:
+Create connection for get the data from tables.
 
 ### Syntax:
 ```php
