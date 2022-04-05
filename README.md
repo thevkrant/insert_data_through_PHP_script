@@ -71,3 +71,6 @@ function closeConnection($con)
 	mysqli_close($con);
 }
 ```
+## 2. Update connection:
+```php
+```
