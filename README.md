@@ -72,5 +72,5 @@ function closeConnection($con)
 }
 ```
 ## 2. Update connection:
-```php
-```
+### Syntax:
+
