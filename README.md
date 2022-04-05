@@ -122,3 +122,6 @@ $stmt->close();
 
 ## 4. SQL query and bind function for update data to table:
 ### Syntax:
+```php
+
+```
