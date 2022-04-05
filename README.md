@@ -39,3 +39,7 @@ The error_reporting() function sets the error_reporting directive at runtime. Th
 error_reporting(E_ALL);
 ini_set('display_errors', 0);
 ```
+
+## First create connection:
+
+### Syntax:
