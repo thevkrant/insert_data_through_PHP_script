@@ -80,7 +80,6 @@ function updateConnection()
 	$dbuser = "username";
 	$dbpass = "password";
 
-
 	mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 	$con2 = mysqli_connect($host, $dbuser, $dbpass, $dbname);
 	$con2->set_charset("utf8");
