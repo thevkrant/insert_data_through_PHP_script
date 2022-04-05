@@ -104,9 +104,9 @@ function closeupdateConnection($con2)
 ## 3. SQL query for get data from tables:
 ### Syntax:
 ```php
-$sql = "// write your query here";
+$sql = "// write your SQL query here";
 $stmt = $con->prepare($sql);
-$stmt->bind_result($state_id, $tehsil_id, $district_id, $district_name);
+$stmt->bind_result();
 $stmt->execute();
 $stateArr1 = array();
 ```
