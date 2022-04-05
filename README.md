@@ -71,6 +71,32 @@ function closeConnection($con)
 	mysqli_close($con);
 }
 ```
+
 ## 2. Update connection:
 ### Syntax:
+```php
+function updateConnection()
+{
 
+	$host = "localhost or IP address";
+	$dbname = "database_name";
+	$dbuser = "username";
+	$dbpass = "password";
+
+
+	mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+	$con2 = mysqli_connect($host, $dbuser, $dbpass, $dbname);
+	$con2->set_charset("utf8");
+	if (mysqli_connect_errno()) {
+		//print mysqli_connect_errno()."ERROR IN MYSQL";
+		print "Oops. Something has gone wrong. Please try again.";
+		return null;
+	}
+	return $con2;
+}
+
+function closeupdateConnection($con2)
+{
+	mysqli_close($con2);
+}
+```
