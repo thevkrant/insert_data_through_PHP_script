@@ -42,8 +42,6 @@ ini_set('display_errors', 0);
 > Note: Change 0 to 1 in code for display the errors.
 
 ## 1. Create connection:
-Create connection for get the data from tables.
-
 ### Syntax:
 ```php
 function createConnection()
@@ -66,6 +64,7 @@ function createConnection()
 }
 ```
 ## Close connection:
+### Syntax:
 ```php
 function closeConnection($con)
 {
