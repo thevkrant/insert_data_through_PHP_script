@@ -44,5 +44,22 @@ ini_set('display_errors', 0);
 
 ### Syntax:
 ```php
+function createConnection()
+{
 
+	$host = "localhost or IP address";
+	$dbname = "database_name";
+	$dbuser = "username";
+	$dbpass = "password";
+
+	mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+	$con = mysqli_connect($host, $dbuser, $dbpass, $dbname);
+	$con->set_charset("utf8");
+	if (mysqli_connect_errno()) {
+		//print mysqli_connect_errno()."ERROR IN MYSQL";
+		print "Oops. Something has gone wrong. Please try again.";
+		return null;
+	}
+	return $con;
+}
 ```
