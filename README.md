@@ -120,5 +120,5 @@ while ($stmt->fetch()) {
 $stmt->close();
 ```
 
-## 4. SQL query and bind function for fetch data from tables:
+## 4. SQL query and bind function for update data to table:
 ### Syntax:
