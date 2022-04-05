@@ -104,5 +104,21 @@ function closeupdateConnection($con2)
 ## 3. SQL query and bind function for fetch data from tables:
 ### Syntax:
 ```php
+$sql = "// write your SQL query here";
+$stmt = $con->prepare($sql);
+$stmt->bind_result($state_id, $tehsil_id, $district_id, $district_name  //veriables);
+$stmt->execute();
+$stateArr1 = array();
 
+while ($stmt->fetch()) {
+	$state = new stdClass();
+	$state->state_id = $state_id;
+	$state->tehsil_id = $tehsil_id;
+	$state->district_id = $district_id;
+	$state->district_name = $district_name;
+
+	array_push($stateArr1, $state);
+}
+
+$stmt->close();
 ```
