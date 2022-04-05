@@ -103,3 +103,4 @@ function closeupdateConnection($con2)
 
 ## 2. Update connection:
 ### Syntax:
+```php```
